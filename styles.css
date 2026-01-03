@@ -1,0 +1,12 @@
+.header{
+            background-color:pink ;color:blue;
+        }
+        .footer{
+            background-color: lightblue;
+        }
+        .container{
+            margin: 0px;
+        }
+        *{
+            margin: 5px;
+        }
