@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html>
+  <head>
     <style>
-        .box{
-            padding:200px;
-            margin:10px;
-            border:5px green dashed;
-            background-color: white;
-            color: magenta;
-        }
         .container{
-            padding:200px;
-            margin:10px;
-            border:5px lightcoral dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: aqua;
+        }
+        .box{
+            width: 300px;
             background-color: yellow;
-            color: rgb(16, 186, 243);
+            border: 1px solid red;
+            margin: 5px;
+            padding: 5px;
+            transition: background-color .5s ease-in;
+        }
+        .box:hover{
+            background-color: orange;
         }
     </style>
-</head>
-<body>
-    <div style="display:flex;">
-        <div class="box">
-            <h3>Box1</h3>
-        </div>
-        <div class="container">
-            <h3>Box2</h3>
-        </div>
-        <div class="box">
-            <h3>Box3</h3>
-        </div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+
+        <h2>Login Here...</h2>
+        <p><input type="text"></p>
+        <p><input type="password"></p>
+        <p><button>Log In</button></p>
+
+      </div>
+      <!-- <div class="box">Box</div>
+      <div class="box">Box</div> -->
     </div>
-</body>
+  </body>
 </html>
