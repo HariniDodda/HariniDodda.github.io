@@ -1,5 +1,9 @@
 .header{
-            background-color:pink ;color:blue;
+        display:flex; 
+        padding:10px;
+        justify-content:space-between;
+        background-color:pink ;
+            color:blue;
         }
         .footer{
             background-color: lightblue;
@@ -9,4 +13,7 @@
         }
         *{
             margin: 5px;
+        }
+        .menu{
+            display:flex;
         }
