@@ -1,12 +1,12 @@
 .login{
-    background-color: blue;
+    background-color: rgb(121, 121, 215);
     color: white;
-    border-radius: 50px ;
+    border-radius: 30px ;
     border: none;
 }
 .account{
-    background-color: green;
+    background-color: rgb(87, 178, 87);
     color: white;
-    border-radius: 50px;
+    border-radius: 30px;
     border: none;
 }

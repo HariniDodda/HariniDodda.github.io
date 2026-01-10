@@ -1,22 +1,25 @@
-function dispMessage(){
-    // a=10
-    // b=20
-    // c=a+b
-    // alert("Hello")
-//    alert(document.getElementById("txtEmail").value)
-//lblMessage.innerHTML=document.getElementById("txtEmail").value + "-" + document.getElementById("txtpass").value
-// lblMessage1.innerHTML=document.getElementById("txtpass").value
-let email=document.getElementById("txtEmail").value
-let pass=document.getElementById("txtpass").value
-//=== is used to check both type and value
-//== is used to check the value
-if(email==="john@gmail.com" && pass==="1234"){
-    lblMessage.innerHTML="Welcome"
+const users = [];
+function dispMessage() {
+  let email = document.getElementById("txtEmail").value;
+  let password = document.getElementById("txtPassword").value;
+  let found = users.find(
+    (element) => element.email === email && element.password === password
+  );
+  if (found) {
+    lblMessage.innerHTML = "Welcome";
+  } else {
+    lblMessage.innerHTML = "Access Denied";
+  }
 }
-else{
-    lblMessage.innerHTML="Denied"
+function addUser() {
+  let name = document.getElementById("txtName").value;
+  let email = document.getElementById("txtEmail").value;
+  let password = document.getElementById("txtPassword").value;
+ let user = { name: name, email: email, password: password };
+  users.push(user);
+  showLoginForm();
+  console.log(users);
 }
- }
 function showLoginForm(){
     let str = `
     <h3>Login Form</h3>
@@ -35,8 +38,10 @@ function showRegisterForm(){
      <h3>Registration Form</h3>
      <p><input type="text" placeholder="email"/></p>
      <p><input type="password" placeholder="password"/></p>
-     <p><input type="text" placeholder="name"/></p>
-     <p><button class="account">Register</button></p>
+     <p><input type="text" placeholder="name" id="txtname"/></p>
+     <p><button class="login" onclick="addUser()">Submit</button></p>
+      <hr>
+      <p>Already a member?<a href="#" onclick="showLoginForm()">Login here</a></p>
     `
     root.innerHTML = str
 }
