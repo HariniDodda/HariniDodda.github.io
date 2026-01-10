@@ -17,3 +17,22 @@ else{
     lblMessage.innerHTML="Denied"
 }
  }
+function showLoginForm(){
+    let str = `
+    <h3>Login Form</h3>
+      <p><label id="lblMessage"></label></p>
+      <p><input type="text" id="txtEmail" /></p>
+      <p><input type="password" id="txtpass" /></p>
+      <p><button class="login" onclick="dispMessage()">Log In</button></p>
+      <hr>
+      <p><button class="account" onclick="showRegisterForm()">Create Account</button></p>
+    `
+    root.innerHTML = str
+}
+
+function showRegisterForm(){
+    let str =  `
+     <h3>Registration Form</h3>
+    `
+    root.innerHTML = str
+}
