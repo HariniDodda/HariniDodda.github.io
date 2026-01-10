@@ -21,8 +21,8 @@ function showLoginForm(){
     let str = `
     <h3>Login Form</h3>
       <p><label id="lblMessage"></label></p>
-      <p><input type="text" id="txtEmail" /></p>
-      <p><input type="password" id="txtpass" /></p>
+      <p><label>Name </label><input type="text" id="txtEmail" /></p>
+      <p><label>Password </label><input type="password" id="txtpass" /></p>
       <p><button class="login" onclick="dispMessage()">Log In</button></p>
       <hr>
       <p><button class="account" onclick="showRegisterForm()">Create Account</button></p>
@@ -33,6 +33,10 @@ function showLoginForm(){
 function showRegisterForm(){
     let str =  `
      <h3>Registration Form</h3>
+     <p><input type="text" placeholder="email"/></p>
+     <p><input type="password" placeholder="password"/></p>
+     <p><input type="text" placeholder="name"/></p>
+     <p><button class="account">Register</button></p>
     `
     root.innerHTML = str
 }
