@@ -1,7 +1,7 @@
 const users = [];
 function dispMessage() {
   let email = document.getElementById("txtEmail").value;
-  let password = document.getElementById("txtPassword").value;
+  let password = document.getElementById("txtpass").value;
   let found = users.find(
     (element) => element.email === email && element.password === password
   );
@@ -12,9 +12,9 @@ function dispMessage() {
   }
 }
 function addUser() {
-  let name = document.getElementById("txtName").value;
+  let name = document.getElementById("txtname").value;
   let email = document.getElementById("txtEmail").value;
-  let password = document.getElementById("txtPassword").value;
+  let password = document.getElementById("txtpass").value;
  let user = { name: name, email: email, password: password };
   users.push(user);
   showLoginForm();
